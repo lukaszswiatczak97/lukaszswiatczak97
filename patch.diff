@@ -1,168 +1,39 @@
-From a5fa208b0e11ce2771eaaf63e2ba4c21c9576568 Mon Sep 17 00:00:00 2001
-From: Zaorisz <zaorisz@wp.pl>
-Date: Thu, 30 May 2019 21:07:35 +0200
-Subject: [PATCH] Klasy i diagram
+From 27dc67dc8950cb67bc0572ebfdf1ad664881328f Mon Sep 17 00:00:00 2001
+From: "jakub.piotrowski1" <jakub.piotrowski1@unilodz.eu>
+Date: Thu, 6 Jun 2019 17:34:10 +0000
+Subject: [PATCH] Deleted Administrator.cs
 
 ---
- Administrator.cs | 20 ++++++++++++++++++++
- Bilet.cs         | 26 ++++++++++++++++++++++++++
- Diagram.drawio   |  1 +
- Klient.cs        | 21 +++++++++++++++++++++
- Rodzaj_Biletu.cs | 20 ++++++++++++++++++++
- Wpis_Cennika.cs  | 20 ++++++++++++++++++++
- 6 files changed, 108 insertions(+)
- create mode 100644 Administrator.cs
- create mode 100644 Bilet.cs
- create mode 100644 Diagram.drawio
- create mode 100644 Klient.cs
- create mode 100644 Rodzaj_Biletu.cs
- create mode 100644 Wpis_Cennika.cs
+ Administrator.cs | 20 --------------------
+ 1 file changed, 20 deletions(-)
+ delete mode 100644 Administrator.cs
 
 diff --git a/Administrator.cs b/Administrator.cs
-new file mode 100644
-index 0000000..50122e8
---- /dev/null
-+++ b/Administrator.cs
-@@ -0,0 +1,20 @@
-+﻿using System;
-+using System.Collections.Generic;
-+using System.Linq;
-+using System.Text;
-+using System.Threading.Tasks;
-+
-+namespace ConsoleApp1
-+{
-+    class Administrator
-+    {
-+        private string imie;
-+        private string nazwisko;
-+        private int ID;
-+
-+        public string Imie { get => imie; set => imie = value; }
-+        public string Nazwisko { get => nazwisko; set => nazwisko = value; }
-+        public int ID1 { get => ID; set => ID = value; }
-+
-+    }
-+}
-diff --git a/Bilet.cs b/Bilet.cs
-new file mode 100644
-index 0000000..f69930b
---- /dev/null
-+++ b/Bilet.cs
-@@ -0,0 +1,26 @@
-+﻿using System;
-+using System.Collections.Generic;
-+using System.Linq;
-+using System.Text;
-+using System.Threading.Tasks;
-+
-+namespace ConsoleApp1
-+{
-+    class Bilet
-+    {
-+        private string nazwaFilmu;
-+        private int sala;
-+        private DateTime data;
-+        private DateTime godzina;
-+        private int rząd;
-+        private int miejsce;
-+
-+        public string NazwaFilmu { get => nazwaFilmu; set => nazwaFilmu = value; }
-+        public int Sala { get => sala; set => sala = value; }
-+        public DateTime Data { get => data; set => data = value; }
-+        public DateTime Godzina { get => godzina; set => godzina = value; }
-+        public int Rząd { get => rząd; set => rząd = value; }
-+        public int Miejsce { get => miejsce; set => miejsce = value; }
-+        
-+    }
-+}
-diff --git a/Diagram.drawio b/Diagram.drawio
-new file mode 100644
-index 0000000..eb66de1
---- /dev/null
-+++ b/Diagram.drawio
-@@ -0,0 +1 @@
-+<mxfile modified="2019-05-30T19:06:18.006Z" host="www.draw.io" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36" etag="mmcHtz_iDj0GjsaC5kwV" version="10.7.1"><diagram id="h_vuYlx3Va4iMSzXGLYM" name="Page-1">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</diagram></mxfile>
-\ No newline at end of file
-diff --git a/Klient.cs b/Klient.cs
-new file mode 100644
-index 0000000..d1fb4a6
---- /dev/null
-+++ b/Klient.cs
-@@ -0,0 +1,21 @@
-+﻿using System;
-+using System.Collections.Generic;
-+using System.Linq;
-+using System.Text;
-+using System.Threading.Tasks;
-+
-+namespace ConsoleApp1
-+{
-+    class Klient
-+    {
-+        private string imie;
-+        private string nazwisko;
-+        private string numerTelefonu;
-+        Bilet bilet;
-+
-+        public string Imie { get => imie; set => imie = value; }
-+        public string Nazwisko { get => nazwisko; set => nazwisko = value; }
-+        public string NumerTelefonu { get => numerTelefonu; set => numerTelefonu = value; }
-+        internal Bilet Bilet { get => bilet; set => bilet = value; }
-+    }
-+}
-diff --git a/Rodzaj_Biletu.cs b/Rodzaj_Biletu.cs
-new file mode 100644
-index 0000000..552ea84
---- /dev/null
-+++ b/Rodzaj_Biletu.cs
-@@ -0,0 +1,20 @@
-+﻿using System;
-+using System.Collections.Generic;
-+using System.Linq;
-+using System.Text;
-+using System.Threading.Tasks;
-+
-+namespace ConsoleApp1
-+{
-+    class Rodzaj_Biletu
-+    {
-+        private string nazwa;
-+        private double procentZnizki;
-+
-+        public string Nazwa { get => nazwa; set => nazwa = value; }
-+        public double ProcentZnizki { get => procentZnizki; set => procentZnizki = value; }
-+         
-+         public void ZmienZnizke(double nowaZnizka)
-+        { }
-+    }
-+}
-diff --git a/Wpis_Cennika.cs b/Wpis_Cennika.cs
-new file mode 100644
-index 0000000..399e4c4
---- /dev/null
-+++ b/Wpis_Cennika.cs
-@@ -0,0 +1,20 @@
-+﻿using System;
-+using System.Collections.Generic;
-+using System.Linq;
-+using System.Text;
-+using System.Threading.Tasks;
-+
-+namespace ConsoleApp1
-+{
-+    class Wpis_Cennika
-+    {
-+        private string nazwaProduktu;
-+        private double cena;
-+
-+        public string NazwaProduktu { get => nazwaProduktu; set => nazwaProduktu = value; }
-+        public double Cena { get => cena; set => cena = value; }
-+
-+        public void ZmienCene(double nowaCena)
-+        {}
-+    }
-+}
+deleted file mode 100644
+index 50122e8..0000000
+--- a/Administrator.cs
++++ /dev/null
+@@ -1,20 +0,0 @@
+-﻿using System;
+-using System.Collections.Generic;
+-using System.Linq;
+-using System.Text;
+-using System.Threading.Tasks;
+-
+-namespace ConsoleApp1
+-{
+-    class Administrator
+-    {
+-        private string imie;
+-        private string nazwisko;
+-        private int ID;
+-
+-        public string Imie { get => imie; set => imie = value; }
+-        public string Nazwisko { get => nazwisko; set => nazwisko = value; }
+-        public int ID1 { get => ID; set => ID = value; }
+-
+-    }
+-}
 -- 
 2.20.1.windows.1
 
